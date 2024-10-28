@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
 import Image from "next/image";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { MdMenu } from "react-icons/md";
 
 const Header = () => {
@@ -46,7 +46,6 @@ const Header = () => {
             ? "max-h-mx pt-8 pb-10 border-t border-white/10"
             : "max-h-0 pt-0 pb-0 overflow-hidden border-white/0"
         } flex flex-col  text-center gap-8 fixed bg-primary-200 w-full left-0 font-mediun text-base capitalize text-white transition-all xl:hidden`}
-          setOpenNav={setOpenNav}
         />
         {/* descktop nav - hidden an small devices */}
         <Nav containerStyles="hidden xl:flex text-white justify-center items-center py-12 gap-4 text-base font-medium transition-all capitalize" />

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -14,7 +15,10 @@ const links = [
   { name: "contact", target: "contact", offset: 0 },
 ];
 
-const MobileNav = ({ containerStyles, setOpenNav }: { containerStyles: string, setOpenNav: any }) => {
+const MobileNav = ({ containerStyles }: { containerStyles: string}) => {
+
+  const [openNav, setOpenNav] = useState(false);
+
 
     const isMobile = useMediaQuery({
         query: '(max-width: 640px)'

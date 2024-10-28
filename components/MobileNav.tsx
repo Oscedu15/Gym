@@ -28,7 +28,7 @@ const MobileNav = ({ containerStyles }: { containerStyles: string}) => {
     <div className={`${containerStyles}`}>
         {links?.map((link, index) => {
         return (
-          <ScrollLink className="cursor-pointer hover:text-accent transition-all capitalize" offset={link.offset} to={link.target} smooth spy activeClass={`${!isMobile && 'active'}`} key={index} onClick={() => setOpenNav(false)}>
+          <ScrollLink className="cursor-pointer hover:text-accent transition-all capitalize" offset={link.offset} to={link.target} smooth spy activeClass={`${!isMobile && 'active'}`} key={index} onClick={() => setOpenNav(openNav)}>
             {link.name}
           </ScrollLink>
         );

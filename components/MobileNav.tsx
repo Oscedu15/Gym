@@ -14,7 +14,7 @@ const links = [
   { name: "contact", target: "contact", offset: 0 },
 ];
 
-const MobileNav = ({ containerStyles, setOpenNav }: { containerStyles: string, setOpenNav: boolean }) => {
+const MobileNav = ({ containerStyles, setOpenNav }: { containerStyles: string, setOpenNav: any }) => {
 
     const isMobile = useMediaQuery({
         query: '(max-width: 640px)'

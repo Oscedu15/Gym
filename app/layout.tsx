@@ -20,13 +20,11 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL("https://gym-tawny-nu.vercel.app/"),
   title: "Fitphysique",
-  description:
-    "Pagina de Gimnasio realizado con Next.js, Tailwaind, TypeScript, Framer-Motion",
   openGraph: {
-    description: "Portfolio Nextjs 15 OpenGraph",
+    description: "Pagina de Gimnasio realizado con Next.js, Tailwaind, TypeScript, Framer-Motion",
     siteName: "Fitphysique Gym",
     url: "https://gym-tawny-nu.vercel.app/",
-    images: "/public/assets/img/gym.png",
+    images: "/gym.png",
     type: "website",
   },
 };

@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -15,26 +15,36 @@ const links = [
   { name: "contact", target: "contact", offset: 0 },
 ];
 
-const MobileNav = ({ containerStyles }: { containerStyles: string}) => {
+type Props = {
+  setOpenNav: Dispatch<SetStateAction<boolean>>;
+  containerStyles: string;
+};
 
-  const [openNav, setOpenNav] = useState(false);
-
-
-    const isMobile = useMediaQuery({
-        query: '(max-width: 640px)'
-    });
+const MobileNav = ({ containerStyles, setOpenNav }: Props) => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 640px)",
+  });
 
   return (
     <div className={`${containerStyles}`}>
-        {links?.map((link, index) => {
+      {links?.map((link, index) => {
         return (
-          <ScrollLink className="cursor-pointer hover:text-accent transition-all capitalize" offset={link.offset} to={link.target} smooth spy activeClass={`${!isMobile && 'active'}`} key={index} onClick={() => setOpenNav(openNav)}>
+          <ScrollLink
+            className="cursor-pointer hover:text-accent transition-all capitalize"
+            offset={link.offset}
+            to={link.target}
+            smooth
+            spy
+            activeClass={`${!isMobile && "active"}`}
+            key={index}
+            onClick={() => setOpenNav(false)}
+          >
             {link.name}
           </ScrollLink>
         );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;

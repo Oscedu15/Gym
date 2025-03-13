@@ -39,8 +39,8 @@ const Header = () => {
           <Image src={"/assets/img/logo.png"} width={117} height={55} alt="" />
         </Link>
         {/* mobile na - hidden on large devices */}
-        <MobileNav
-          containerStyles={`${headerActive ? "top-[90px]" : "top-[100px]"}
+        <MobileNav setOpenNav={setOpenNav}
+          containerStyles={`${headerActive ? "top-[90px]" : "top-[100px]"} 
         ${
           openNav
             ? "max-h-mx pt-8 pb-10 border-t border-white/10"
